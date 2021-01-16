@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_new_pool_zong"
+    android:orientation="vertical"
+    tools:context=".activity.NewPoolTixianActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/exchange_fanhui"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_tool_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提至余额"
+            android:textColor="@color/font_color_text"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_sift_border"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/edit_num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="1234567890."
+                    android:hint="@string/string_edit_dc_number"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="DC"
+                    android:id="@+id/type_name"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/hint_color_text" />
+
+                <TextView
+                    android:id="@+id/all_dc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_all"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/keti_dc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="可提数量  0.00  DC"
+                android:textColor="@color/font_color_text"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/choose_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_sift_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="消耗USDT奖励DBC"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_newpool_down" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/yue_usdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="USDT余额：11110.000"
+                android:textColor="@color/font_color_text"
+                android:textSize="12sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#aa111B27"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="预计获得"
+                            android:textColor="@color/hint_color_text"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/get_dc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="0.00 DC"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="预计获得"
+                            android:textColor="@color/hint_color_text"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/get_dc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="0.00 DC"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="预计消耗"
+                            android:textColor="@color/hint_color_text"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/get_dc3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="0.00 DC"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="每提一枚DC需消耗USDT：0.05"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="每消耗一枚USDT奖励BDC：20"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_sift_corner2"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/edit_psw"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_input_pwd"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_sift_corner"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

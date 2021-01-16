@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Appbar背景色-->
+    <color name="colorPrimary">#0c1722</color>
+    <!--状态栏颜色-->
+    <color name="colorPrimaryDark">#0c1722</color>
+    <!--控制各个控件被选中时的颜色-->
+    <color name="colorAccent">#0C94E8</color>
+    <color name="line_color">#F0F0F0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green">#37B68A</color>
+    <color name="textgreen">#73FFC9</color>
+    <!--半透明-->
+    <color name="translucence">#22000000</color>
+    <color name="colorAccent_translucence">#222290F1</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <!--下拉刷新渐变色-->
+    <color name="refresh_color_1">#0745FD</color>
+    <color name="refresh_color_2">#4472FC</color>
+    <color name="refresh_color_3">#7E9EFC</color>
+    <!--条目view颜色-->
+    <color name="item_view">#232e3a</color>
+    <color name="item_view1">#2B363A</color>
+    <!--常用背景颜色-->
+    <color name="edit">#E1E3E7</color>
+    <color name="edit_excharge">#BDBDBD</color>
+    <color name="colorLight">#f8f8f8</color>
+    <color name="dark">#30111b27</color>
+    <color name="light_color">#444766</color>
+    <color name="bg_deal">#1E2639</color>
+    <color name="bg_deal1">#262F43</color>
+    <color name="bg_deal2">#2D3649</color>
+    <color name="bg_deal3">#0b0c0d</color>
+    <color name="bg_tab">#181d1f</color>
+    <color name="bg_topic">#0B0C0D</color>
+    <color name="bg_pic">#121516</color>
+    <!--常用字体颜色-->
+    <color name="bg_topic_btn">#700B0C0D</color>
+    <color name="join_color">#A5D2F8</color>
+    <color name="tab_color_show">#73F4FF</color>
+    <color name="font_color_red">#F80606</color>
+    <color name="font_color_rose">#C83A4C</color>
+    <color name="font_color_green">#16DC5C</color>
+    <color name="font_color_yellow">#FEBA45</color>
+    <color name="font_color_orange">#E85C04</color>
+    <color name="font_color_blue">#296bd2</color>
+    <color name="hint_color_blue">#618AD1</color>
+    <color name="font_color_lias">#ABAAEA</color>
+    <color name="font_color_violet">#5E0AAE</color>
+    <color name="font_color_text">#c9ccd2</color>
+    <color name="hint_color_text">#565E6C</color>
+    <color name="hint_deal_text">#59627D</color>
+    <color name="hint_exchange_text">#57888E</color>
+    <color name="show_exchange_text">#394748</color>
+    <color name="show_text">#73F4FF</color>
+
+    <color name="text333">#333333</color>
+    <color name="text444">#444444</color>
+    <color name="text555">#555555</color>
+    <color name="text666">#666666</color>
+    <color name="text999">#999999</color>
+    <color name="textred">#ff5456</color>
+    <color name="text_red">#FF7383</color>
+
+    <color name="chart_line">#c9ccd2</color>
+</resources>

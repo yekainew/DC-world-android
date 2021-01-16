@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical"
+    tools:context=".activity.MineBookDetailActivity">
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/bookdetail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="+0"
+            android:textColor="@color/tab_color_show"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_qukuai_type"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_lx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/string_mine_transfer"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+
+    <RelativeLayout
+        android:id="@+id/exchange_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/exchange_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_duihuan_num"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/exchange_amount_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:gravity="right"
+            android:text="0x55488"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/exchange_huoqu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/exchange_huoqu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_duihuan_get"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/exchange_huoqu_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:gravity="right"
+            android:text="0x55488"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_huoqu"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/heyue_adderss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/bookdetail_dizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_heyue_addree"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_dizhi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/bookdetail_dizhi"
+            android:text=""
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/bookdetail_dizhi1_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/new_icon_copy" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/heyue_address_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+    <RelativeLayout
+        android:id="@+id/laiyuan_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/bookdetail_mydizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_laiyuan_address"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_mydizhi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/bookdetail_mydizhi"
+            android:text=""
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/bookdetail_mydizhi1_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/new_icon_copy" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/laiyuan_address_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+    <RelativeLayout
+        android:id="@+id/tophone_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bookdetail_tophone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_quxiang_phone"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_tophone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@id/bookdetail_tophone"
+            android:text="0x5548888xdfsds8482588888854n665ff56d65"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bookdetail_phone_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/quxian_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/bookdetail_todizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_quxiang_address"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_todizhi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/bookdetail_todizhi"
+            android:text=""
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/bookdetail_todizhi1_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/new_icon_copy" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/quxiang_address_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_kuanggong_fee"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_kgf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_qukuai_zichan"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_zc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shanglian_time"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2020-00-00  00:00:00"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/bookdetail_hash1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_jiaoyi_hash"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/bookdetail_hash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/bookdetail_hash1"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/bookdetail_hash_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/new_icon_copy" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A" />
+
+
+    <RelativeLayout
+        android:id="@+id/ru_hash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdetail_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/ru_hash2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_ruzhang_hash"
+            android:textColor="#565E6C"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/ru_hash1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@id/ru_hash2"
+            android:maxLines="2"
+            android:text="0x5548888xdfsds8482588888854n665ff56d65"
+            android:textColor="#CACCD2"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/ru_hash_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="@dimen/corner_15"
+        android:layout_marginRight="25dp"
+        android:background="#242E3A"
+        android:visibility="gone" />
+
+</LinearLayout>

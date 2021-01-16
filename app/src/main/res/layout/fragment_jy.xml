@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_pic"
+    tools:context=".fragment.JyFragment">
+    <com.jkkg.hhtx.widget.tablayout.CommonTabLayout
+        android:id="@+id/commontab_layout"
+        android:layout_width="196dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+
+        android:background="@mipmap/new_bg_deal_tab"
+        app:tl_textSelectColor="@color/text333"
+        app:tl_textUnselectColor="@color/text666"
+        app:tl_tab_space_equal="true"
+        app:tl_textsize="@dimen/sp_14"
+        app:tl_underline_height="0dp"
+        app:tl_indicator_height="0dp"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"/>
+
+
+</LinearLayout>

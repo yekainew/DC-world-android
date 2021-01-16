@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.CertificationImgActivity">
+
+    <include layout="@layout/include_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/string_idcard_front"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_idcode_tip"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/img_front"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:src="@mipmap/icon_front"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/string_idcard_reverse"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_idcode_tip"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/img_verso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:src="@mipmap/icon_verso"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/string_idcode_hand"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_idcode_hand_tip"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/img_hand_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/icon_hand_cat" />
+
+            <Button
+                android:id="@+id/btn_true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/bg_sift_corner"
+                android:text="@string/string_finish"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

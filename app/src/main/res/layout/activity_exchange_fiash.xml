@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_exchange"
+    android:orientation="vertical"
+    tools:context=".activity.ExchangeFiashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/exchange_fanhui"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_tool_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/string_mine_exchange"
+            android:textColor="@color/font_color_text"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/exchange_record"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/icon_exchange_jilv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/bg_exchange_num"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="全网可兑换总量"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="全网累计兑换量"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/exchange_allnum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0.00 DC"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/exchange_leijinum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0.00 DC"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我的钱包余额"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="兑换可获得"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/exchange_mynum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0.00 USDT"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/exchange_duihuannum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="0.00 DC"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp">
+
+        <com.liys.view.LineBottomProView
+            android:id="@+id/bottom_pro_view"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:box_radius="6dp"
+            app:progress_color="@color/font_color_blue"
+            app:progress_color_background="@color/dark"
+            app:progress_max="100"
+            app:progress_value="50"
+            app:radius="20dp"
+            app:text_color="@color/white"
+            app:text_decimal_num="2"
+            app:text_show="true"
+            app:text_size="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/one_bili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:1"
+                android:textColor="@color/font_color_text" />
+
+            <TextView
+                android:id="@+id/one_dc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="0.00 DC"
+                android:textColor="@color/font_color_text" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.jkkg.hhtx.utils.CustomRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="兑换比例(USDT/DC)"
+        android:textColor="@color/hint_color_text"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_ture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_sift_corner"
+        android:text="开始演替"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</LinearLayout>

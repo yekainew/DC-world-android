@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical"
+    tools:context=".activity.ActivationUserActivity">
+
+    <include layout="@layout/include_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/string_xaiji_wallet_address"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/font_color_text"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/invite_activate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="6dp"
+            android:background="@mipmap/new_button_exitview"
+            android:hint="@string/string_jihuo_xaiji_text"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/new_icon_saoma"
+            android:layout_centerVertical="true"
+            android:id="@+id/avtivation_qrcode"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/corner_15"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/string_wellet_password"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/font_color_text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:background="@mipmap/new_button_exitview"
+        android:orientation="horizontal">
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/invite_psw"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:hint="@string/string_input_pwd"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+        <TextView
+            android:id="@+id/send_code1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_sift_corner2"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:text="@string/string_registration_send_code"
+            android:textColor="@color/colorAccent"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/string_yue"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/num_dc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/tab_color_show"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/string_kuangg_fee"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="激活需要消耗"
+            android:textColor="@color/hint_color_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/fee_dc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:text="0.1"
+            android:textColor="@color/tab_color_show"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DC"
+            android:textColor="@color/hint_color_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <ImageView
+            android:id="@+id/jihuo_why"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/new_icon_jihuo_why"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_shengyu_jihuo_num"
+            android:textColor="@color/hint_color_text"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/jihuo_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="0"
+            android:textColor="@color/show_text"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/buy_jihuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:background="@mipmap/new_bg_button_jihuo_get"
+            android:text="@string/string_buy_jihuo_num"
+            android:textColor="@color/show_text"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/new_bg_button"
+        android:text="@string/string_jihuo"
+        android:textColor="@color/tab_color_show"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold" />
+</LinearLayout>

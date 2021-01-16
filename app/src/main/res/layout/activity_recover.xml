@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_topic"
+    android:orientation="vertical">
+    <include layout="@layout/include_title"/>
+    <com.jkkg.hhtx.widget.tablayout.CommonTabLayout
+        android:id="@+id/commontab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/new_bg_daoru_tab"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:tl_textSelectColor="@color/show_text"
+        app:tl_textUnselectColor="@color/text666"
+        app:tl_tab_space_equal="true"
+        app:tl_textsize="@dimen/sp_14"
+        app:tl_underline_height="0dp"
+        app:tl_indicator_height="0dp"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"/>
+</LinearLayout>

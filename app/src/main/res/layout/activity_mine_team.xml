@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic">
+    <include layout="@layout/include_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_user_head"
+            android:textColor="@color/font_color_text"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/sp_14"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/string_user_address"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:text="@string/string_user_suanli"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14"/>
+
+    </RelativeLayout>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/team_smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_topic">
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/team_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

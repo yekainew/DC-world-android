@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_set_wallet"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="@string/string_wallet_name"
+                    android:lines="1"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_set_mima"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_password"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/string_user_password_dl"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/hide_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_login_eye_down" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_password2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/string_user_password_dl_ok"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/hide_password2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_login_eye_down" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_tip_xinxi"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="@string/string_tip_xinxi_text"
+                    android:lines="1"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/new_icon_agree_show"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_create_wallet_text1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_yudu_and_agree"
+                    android:textColor="@color/hint_color_text"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_fuwu_and_tiaokuan"
+                    android:id="@+id/fuwuyinsi_zj"
+                    android:textColor="#57B4BC"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/string_create_wallet_text3"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/string_create_wallet_text4"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_pay_password"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_user_password_pay"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/hide_pay_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_login_eye_down" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_pay_password2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_user_password_payok"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/hide_pay_password2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_login_eye_down" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="@string/string_user_phone"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_phone_code"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="@string/string_user_phone_code"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+                <TextView
+                    android:id="@+id/send_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_sift_corner2"
+                    android:padding="5dp"
+                    android:text="@string/string_registration_send_code"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/new_bg_button"
+                android:text="@string/string_create_btn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

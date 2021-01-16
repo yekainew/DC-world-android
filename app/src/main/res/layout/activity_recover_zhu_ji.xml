@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121516"
+    tools:context=".fragment.RecoverSiFragment">
+    <include layout="@layout/include_title"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_tip_text_select10"
+                android:textColor="@color/font_color_text"
+                android:visibility="gone"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/edit_icon"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_zj_zjc"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="@string/string_et_zjc"
+                    android:lines="7"
+                    android:text=""
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_wallet_name"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_15"
+                    />
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/recover_zj_name"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/string_edit_wallet_name"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_wellet_password"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_15"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    >
+                    <com.jkkg.hhtx.widget.ClearEditText
+                        android:id="@+id/recover_zj_password"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@null"
+                        android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                        android:hint="@string/string_input_pwd"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/font_color_text"
+                        android:textColorHint="@color/hint_color_text"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/hide_zj_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/icon_login_eye_down" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/item_view" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.jkkg.hhtx.widget.ClearEditText
+                        android:id="@+id/recover_zj_password2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                        android:hint="@string/string_user_password_dl_ok"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/font_color_text"
+                        android:textColorHint="@color/hint_color_text"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/hide_zj_password2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/icon_login_eye_down" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_tip_xinxi"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_15"
+                    />
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/recover_zj_tishi"
+                    android:layout_height="30dp"
+                    android:layout_width="match_parent"
+                    android:background="@null"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                    android:hint="@string/string_user_tishi"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/corner_20"
+                android:layout_marginTop="@dimen/dp_10"
+
+
+
+                >
+                <ImageView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:src="@mipmap/icon_true"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/corner_15"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_create_wallet_text1"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_15"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_yudu_and_agree"
+                            android:textColor="@color/text333"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_fuwu_and_tiaokuan"
+                            android:id="@+id/fuwuyinsi_zj"
+                            android:textColor="#57B4BC"
+                            />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_create_wallet_text3"
+                        android:textColor="@color/text333"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_create_wallet_text4"
+                        android:textColor="@color/text333"
+                        android:layout_marginTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_zj_true"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/si_btn"
+                android:text="@string/string_text_login_btn2"
+
+                android:textColor="@color/tab_color_show"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

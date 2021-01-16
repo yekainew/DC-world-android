@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.MineFeedbackDetailActivity">
+
+    <include layout="@layout/include_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/feedback_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:text="标题：xxxxxxxxxxxx"
+                android:textColor="@color/font_color_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/feedback_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+
+                android:text="2020-02-02 12:10:00"
+                android:textColor="@color/hint_color_text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/feedback_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="正文：xxxxxxxxxxxxxxxxxxxaaaaaaaaaaaaaaaaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzxcxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/hint_color_text"
+                android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20dp"
+            android:background="@color/item_view"
+            />
+
+        <TextView
+            android:id="@+id/official_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:text="官方回复：xxxxxxxxxxxx"
+            android:textColor="@color/font_color_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/official_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:text="2020-02-02 12:10:00"
+            android:textColor="@color/hint_color_text"
+            android:textSize="12sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

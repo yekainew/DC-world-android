@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.MineSystemSetActivity">
+    <include layout="@layout/include_title"/>
+
+    <TextView
+        android:id="@+id/mine_xitong_tab"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/new_bg_item"
+        android:drawableRight="@mipmap/new_icon_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/string_jiedian_set"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

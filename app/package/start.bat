@@ -1,0 +1,6 @@
+echo off
+echo ==========   MIDUOZHUANQIAN  ==========
+echo start to generate channel apks......
+java -jar walle-cli-all.jar batch -f channel.txt app-release.apk output
+echo finish......
+pause

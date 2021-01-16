@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/dp_40"
+    android:layout_marginRight="@dimen/dp_40"
+    android:background="@drawable/update_view_shape"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_update" />
+
+    <LinearLayout
+        android:id="@+id/update_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="@string/string_update_new"
+            android:textColor="@color/font_color_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/update_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="v 0.0.0"
+            android:textColor="@color/font_color_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/string_update_text1"
+        android:textColor="@color/font_color_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/string_update_text2"
+        android:textColor="@color/font_color_text"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/corner_20"
+        android:layout_marginBottom="@dimen/corner_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/quit_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/update_btn_shape"
+            android:lines="1"
+            android:text="@string/string_sweet_cancle"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/update_btn_shape"
+            android:lines="1"
+            android:text="@string/string_liji_gengxin"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

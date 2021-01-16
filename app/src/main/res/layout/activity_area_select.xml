@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/include_title"/>
+    <me.yokeyword.indexablerv.IndexableLayout
+        android:id="@+id/indexableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:indexBar_layout_width="30dp"
+        app:indexBar_textColor="@color/text666"
+        app:indexBar_selectedTextColor="@color/tab_color_show"
+        app:indexBar_textSize="12sp"
+        app:indexBar_textSpace="6dp"/>
+</LinearLayout>

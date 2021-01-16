@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    android:gravity="center_horizontal"
+    tools:context=".activity.MineAboutUserActivity">
+    <include layout="@layout/include_title"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/new_icon_logo"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/new_icon_logo_name"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/banben_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:text="版本号 V 0.0.0"
+        android:textColor="@color/hint_color_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mine_about_tab1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/new_bg_item"
+        android:drawableRight="@mipmap/new_icon_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/string_mine_about_user"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/mine_about_tab2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="0dp"
+        android:background="@mipmap/new_bg_item"
+        android:drawableRight="@mipmap/new_icon_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/String_user_agreement"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/mine_about_tab3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="0dp"
+        android:background="@mipmap/new_bg_item"
+        android:drawableRight="@mipmap/new_icon_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/streing_guangfangwww"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/mine_about_tab4"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="0dp"
+        android:background="@mipmap/new_bg_item"
+        android:drawableRight="@mipmap/new_icon_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/string_wechar"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+
+</LinearLayout>

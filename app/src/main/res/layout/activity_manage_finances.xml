@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.ManageFinancesActivity">
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_manage_finiance"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Dragon Pool 理财"
+            android:textColor="@color/tab_color_show"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/string_pool_xiamian"
+            android:textColor="@color/font_color_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/bg_tab"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/add_earnings_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="0"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/string_yield_usdt"
+                    android:textColor="@color/hint_color_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="40sp"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/yesterday_earnings_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="0"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/string_yield_dayusdt"
+                    android:textColor="@color/hint_color_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/corner_15"
+        android:layout_marginRight="@dimen/corner_15"
+        android:background="@color/bg_tab"
+        >
+        <com.jkkg.hhtx.widget.tablayout.CommonTabLayout
+            android:id="@+id/finances_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            app:tl_tab_width="70dp"
+            app:tl_textSelectColor="@color/tab_color_show"
+            app:tl_textUnselectColor="@color/hint_color_text"
+            app:tl_tab_space_equal="true"
+            app:tl_textsize="@dimen/sp_14"
+            app:tl_underline_height="0dp"
+            app:tl_indicator_height="0dp"
+            />
+        <TextView
+            android:id="@+id/yield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_yield_mingxi"
+            android:textColor="@color/tab_color_show"
+            android:textSize="@dimen/sp_13"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/corner_15"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp"
+        android:id="@+id/finances_list"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp"
+        android:visibility="gone"
+        android:id="@+id/my_finances_list"
+        />
+
+
+</LinearLayout>

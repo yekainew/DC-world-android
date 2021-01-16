@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_item_empty_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/iv_item_empty"
+            android:gravity="center"
+            android:src="@mipmap/new_icon_null_shuju"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <TextView
+            android:id="@+id/tv_item_empty_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/empty"
+            android:textColor="@color/text333"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</RelativeLayout>
+

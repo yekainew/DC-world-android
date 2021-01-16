@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_marginTop="@dimen/corner_20"
+            android:layout_height="45dp"
+            android:id="@+id/asset_item_iv"
+            android:scaleType="fitXY"
+            android:src="@mipmap/new_icon_asset_zhuanru"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/asset_name"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="USDTqweweqweqweqweqweqweqweqweqw"
+                    android:lines="1"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/copy_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/new_icon_copy_show"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/04  17:17:30"
+                android:textSize="@dimen/sp_13"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text666"
+                android:id="@+id/asset_item_tv"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/asset_usable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/new_bg_number"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="- 0.00000"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/font_color_green"
+            android:textStyle="bold"
+            android:lines="1"
+            android:ellipsize="end"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/asset_freeze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00000"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/font_color_text"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/asset_equivalent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text="0.00000 USDT"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text666"
+                android:lines="1"
+                android:ellipsize="end"
+                android:shadowRadius="5"
+                android:shadowDx="0"
+                android:shadowDy="0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view" />
+</LinearLayout>

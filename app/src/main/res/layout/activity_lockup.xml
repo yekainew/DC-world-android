@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lockup_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.LockupActivity">
+
+    <include layout="@layout/include_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/dark"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_fuwu_zong"
+                                android:textColor="@color/hint_color_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/lockup_dc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/tab_color_show"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DC"
+                                android:id="@+id/bizhongmingcheng"
+                                android:textColor="@color/hint_color_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_pool_yeild_lv"
+                                android:textColor="@color/hint_color_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/lockup_bfb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="0%"
+                                android:textColor="@color/font_color_text"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_zonghe_nhua"
+                                android:textColor="@color/hint_color_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lockup_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:ellipsize="end"
+                        android:lines="4"
+                        android:text="@string/string_lockup_text"
+                        android:textColor="@color/hint_color_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/string_zhuanru_num"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/edit_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/new_button_exitview"
+                    android:digits="1234567890."
+                    android:hint="@string/string_edit_zhuanru_num"
+                    android:lines="1"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/string_wellet_password"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/edit_pad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/new_button_exitview"
+                    android:hint="@string/string_edit_password"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_zhanghu_yue"
+                    android:textColor="@color/hint_color_text"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/dc_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="0.00"
+                    android:textColor="@color/hint_color_text"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/dc_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DC"
+                    android:textColor="@color/hint_color_text"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/string_select_day"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <RelativeLayout
+                    android:id="@+id/lockup_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_sift_corner_wrath"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/text_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="30天"
+                        android:textColor="@color/font_color_text"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_botton" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/string_yuqi_yeild"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/yeild_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="0.00 DC"
+                    android:textColor="@color/tab_color_show"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/new_bg_button"
+                android:text="@string/string_sweet_confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

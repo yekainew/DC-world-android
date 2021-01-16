@@ -1,0 +1,20 @@
+[
+  {
+    "en":"China",
+    "zh":"中国",
+    "locale":"CN",
+    "code":86
+  },
+  {
+    "en":"United Kiongdom",
+    "zh":"英国",
+    "locale":"GB",
+    "code":44
+  },
+  {
+    "en":"United States of America",
+    "zh":"美国",
+    "locale":"US",
+    "code":1
+  }
+]

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/withdraw"
+        android:textColor="@color/font_color_text"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/withdraw_price"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/edit_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="1234567890."
+            android:hint="@string/playse_price_num"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/pay_pad"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/plase_psd"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/sweet_dialog_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/sms_yanzheng"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/edit_yanzheng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/playse_sms_yanzheng"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/sweet_dialog_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_view" />
+
+    <LinearLayout
+        android:id="@+id/sweet_dialog_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/dialog_left_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/string_sweet_cancle"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:id="@+id/dialog_line"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/item_view" />
+
+        <TextView
+            android:id="@+id/dialog_right_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/string_sweet_confirm"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</LinearLayout>

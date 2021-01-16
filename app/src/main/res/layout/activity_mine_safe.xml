@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/safe_certification"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/string_mine_safe"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/safe_certification_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:layout_toStartOf="@id/safe_certification_img"
+            android:drawablePadding="10dp"
+            android:lines="1"
+            android:text="@string/string_mine_safe_unfinish"
+            android:textColor="@color/textred"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/safe_certification_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/corner_20"
+            android:background="@mipmap/ic_grey_more" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_view" />
+
+    <TextView
+        android:id="@+id/safe_change_dlpassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark"
+        android:drawableRight="@mipmap/icon_self_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/string_modify_password"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_view" />
+
+    <TextView
+        android:id="@+id/safe_change_paypassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark"
+        android:drawableRight="@mipmap/icon_self_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/string_change_password_pay"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_view" />
+
+    <TextView
+        android:id="@+id/safe_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark"
+        android:drawableRight="@mipmap/icon_self_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/string_safe_wallet"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_view" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="40dp"
+        android:background="@mipmap/new_bg_button"
+        android:text="@string/string_back_btn"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

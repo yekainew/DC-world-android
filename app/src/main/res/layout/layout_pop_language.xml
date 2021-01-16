@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
+
+    <TextView
+        android:id="@+id/tv_pop_cn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/string_language_cn"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:background="@drawable/bg_tab_corner_select"/>
+
+    <TextView
+        android:id="@+id/tv_pop_en"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/string_language_en"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:background="@drawable/bg_tab_corner_select"/>
+    <TextView
+        android:id="@+id/tv_pop_system"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/string_language_system"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:background="@drawable/bg_tab_corner_select"/>
+</LinearLayout>

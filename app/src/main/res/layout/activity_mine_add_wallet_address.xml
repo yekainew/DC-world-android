@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical"
+    tools:context=".activity.MineAddWalletAddressActivity">
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/choose_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/new_button_exitview">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/string_choose_wallet_bi"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/text999"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/corner_15"
+                    android:src="@mipmap/new_icon_address_xiala" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/new_button_exitview">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/extract_phone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_toStartOf="@id/extract_cramar"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="@string/string_edit_address"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/extract_cramar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/corner_15"
+                    android:src="@mipmap/new_icon_saoma" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/string_beizhu"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/beizhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="@string/string_edit_beizhu"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/item_view" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/new_bg_button"
+                android:text="@string/string_finish"
+                android:textColor="@color/tab_color_show"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/img_head"/>
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="BTC"
+                android:lines="1"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginLeft="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/font_color_text"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp">
+            <TextView
+                android:id="@+id/up_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textStyle="bold"
+                android:textColor="@color/font_color_text"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/down_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="≈￥0.00"
+                android:textColor="@color/hint_color_text"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="0.6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp">
+            <TextView
+                android:id="@+id/tolerance"
+                android:layout_width="70dp"
+                android:layout_height="@dimen/dp_30"
+                android:background="@mipmap/icon_hangqing_btn"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="+0.00%"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#2B363A"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        />
+</RelativeLayout>

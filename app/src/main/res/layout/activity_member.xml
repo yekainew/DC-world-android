@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical"
+    tools:context=".activity.MemberActivity">
+    <include layout="@layout/include_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/string_sweet_verify"
+                android:id="@+id/login"
+                android:textSize="22sp"
+                android:textColor="@color/font_color_text"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/string_need_anquan_yanzheng"
+                android:textSize="12sp"
+                android:textColor="@color/hint_color_text"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/choose_guojia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/img_guoqi"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/flag_cn"/>
+                    <TextView
+                        android:id="@+id/text_guojia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="中国"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/text_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="+86"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:src="@mipmap/icon_sjx_down_blue"/>
+                </LinearLayout>
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/create_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:hint="@string/string_wellet_password"
+                    android:lines="1"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view"
+                />
+            <Button
+                android:id="@+id/btn_true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/new_bg_button"
+                android:text="@string/string_yanzheng"
+                android:textColor="@color/show_text"
+
+                android:textSize="@dimen/sp_14" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_click_user_agree"
+                    android:textColor="@color/hint_color_text"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/user_deal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_user_pack"
+                    android:textColor="@color/tab_color_show"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.dx.mobile.captcha.DXCaptchaView
+            android:id="@+id/dxCaptcha"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+        android:visibility="gone"
+            android:layout_width="300dp"
+            android:layout_height="200dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

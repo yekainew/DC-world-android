@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="sp_8">8sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_30">30dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="sp_34">34dp</dimen>
+    <dimen name="sp_48">48sp</dimen>
+    <dimen name="corner_6">6dp</dimen>
+    <dimen name="corner_8">8dp</dimen>
+    <dimen name="corner_15">15dp</dimen>
+    <dimen name="corner_20">20dp</dimen>
+</resources>

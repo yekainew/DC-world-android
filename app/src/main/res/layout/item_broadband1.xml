@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_jiedong_type"
+        android:textColor="@color/font_color_text" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/string_kuandai"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/femle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:text="@string/string_nengliang"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_moneyyue"
+            android:textColor="@color/font_color_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#73F4FF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#121516"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/edit_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="1234567890."
+            android:hint="@string/string_shuru_num"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/all_trx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="TRX"
+            android:textColor="#73F4FF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_ziyuan_jieshou"
+            android:textColor="@color/font_color_text" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/oneself"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/string_oneself"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/herself"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:checked="false"
+                    android:text="@string/string_herself"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="14sp" />
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

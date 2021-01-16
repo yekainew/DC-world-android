@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/user_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_user_head1"/>
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_head"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/hint_color_text"/>
+
+        <TextView
+            android:id="@+id/user_uid"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="111111"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/hint_color_text"/>
+        <TextView
+            android:id="@+id/user_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="0.00"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/font_color_text"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view"/>
+</LinearLayout>

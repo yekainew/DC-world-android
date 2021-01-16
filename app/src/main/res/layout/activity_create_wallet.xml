@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.CreateWalletActivity">
+    <include layout="@layout/include_title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置钱包"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+
+    <com.jkkg.hhtx.widget.ClearEditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:hint="请输入名称"
+        android:lines="1"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:textColor="@color/font_color_text"
+        android:textColorHint="@color/hint_color_text"
+        android:textSize="@dimen/sp_14" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置密码"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+
+    <com.jkkg.hhtx.widget.ClearEditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:hint="请输入密码，至少8位数"
+        android:lines="1"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:textColor="@color/font_color_text"
+        android:textColorHint="@color/hint_color_text"
+        android:textSize="@dimen/sp_14" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+
+</LinearLayout>

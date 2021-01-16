@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jkkg.hhtx">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:hasFragileUserData="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.ResetWalletPasswordActivity"></activity>
+        <activity android:name=".activity.SelectBcNameActivity" />
+        <activity android:name=".activity.ObservationWalletActivity" />
+        <activity android:name=".activity.HelpWebActivity" />
+        <activity android:name=".activity.AssetTransactionDetailsActivity" />
+        <activity android:name=".activity.NodeSettingsActivity" />
+        <activity android:name=".activity.MineSystemSetActivity" />
+        <activity android:name=".activity.WalletWatchActivity" />
+        <activity android:name=".activity.ActivationBuyRecordActivity" />
+        <activity android:name=".activity.ActivationBuyActivity" />
+        <activity android:name=".activity.RecoverSiActivity" />
+        <activity android:name=".activity.RecoverZhuJiActivity" />
+        <activity android:name=".activity.BroadbandActivity" />
+        <activity android:name=".activity.DetailHashActivity" />
+        <activity android:name=".activity.ExchangeAssetsDetailActivity" />
+        <activity android:name=".activity.ExchangeRewardActivity" />
+        <activity android:name=".activity.ExchangeAssetActivity" />
+        <activity android:name=".activity.ManageWalletActivity" />
+        <activity android:name=".activity.MineXitongActivity" />
+        <activity android:name=".activity.MineAddWalletAddressActivity" />
+        <activity android:name=".activity.MineAddAddressActivity" />
+        <activity android:name=".activity.MineAddressBookActivity" />
+        <activity android:name=".activity.CreateWalletActivity" />
+        <activity android:name=".activity.AddWalletActivity" />
+        <activity android:name=".activity.MineAboutUserActivity" />
+        <activity android:name=".activity.MineHelpActivity" />
+        <activity android:name=".activity.DealDeleteFlowActivity" />
+        <activity android:name=".activity.DealAddFlowActivity" />
+        <activity android:name=".activity.DAppActivity" />
+        <activity android:name=".activity.NewPoolTixianActivity" />
+        <activity android:name=".activity.NewPoolAlllanActivity" />
+        <activity android:name=".activity.NewPoolYeildActivity" />
+        <activity android:name=".activity.NewMypoolActivity" />
+        <activity android:name=".activity.NewPoolAllActivity" />
+        <activity android:name=".activity.NewPoolMinerActivity" />
+        <activity android:name=".activity.GuiZeActivity" />
+        <activity android:name=".activity.ExchangeRecordActivity" />
+        <activity android:name=".activity.CunbiActivity" />
+        <activity android:name=".activity.ExchangeActivity" />
+        <activity android:name=".activity.ExchangeFiashActivity" />
+        <activity android:name=".activity.LockupTixianActivity" />
+        <activity android:name=".activity.LockupRecordActivity" />
+        <activity android:name=".activity.LockupActivity" />
+        <activity android:name=".activity.RewardWithdrawActivity" />
+        <activity android:name=".activity.RewardListActivity" />
+        <activity android:name=".activity.RewardActivity" />
+        <activity android:name=".activity.WalletManageActivity" />
+        <activity android:name=".activity.ManageLockActivity" />
+        <activity android:name=".activity.ActivationDetailsActivity" />
+        <activity android:name=".activity.ActivationListActivity" />
+        <activity android:name=".activity.ActivationUserActivity" />
+        <activity android:name=".activity.WalletManagementActivity" />
+        <activity android:name=".activity.CreateSelectBizhongActivity" />
+        <activity android:name=".activity.ModifyWalletPasswordActivity" />
+        <activity android:name=".activity.ManageFinancesYeildActivity" />
+        <activity android:name=".activity.SignlnIncomeActivity" />
+        <activity android:name=".activity.MineExchangeWhyActivity" />
+        <activity android:name=".activity.IncomeWithdrawalActivity" />
+        <activity android:name=".activity.ManageFinancesBuyActivity" />
+        <activity android:name=".activity.ManageFinancesUSDTActivity" />
+        <activity android:name=".activity.FinancialManagementRuleActivity" />
+        <activity android:name=".activity.ManageFinancesActivity" />
+        <activity android:name=".activity.PublicChainActivity" />
+        <activity android:name=".activity.MineNewsManagementActivity" />
+        <activity android:name=".activity.MineSystemNoticeDetailActivity" />
+        <activity android:name=".activity.NewsActivity" />
+        <activity android:name=".activity.NewsListActivity" />
+        <activity android:name=".activity.MineFeedbackDetailActivity" />
+        <activity android:name=".activity.SignInActivity" />
+        <activity android:name=".activity.MineFeedbackListActivity" />
+        <activity android:name=".activity.MineFeedbackActivity" />
+        <activity android:name=".activity.SendCodeActivity" />
+        <activity android:name=".activity.MemberActivity" />
+        <activity android:name=".activity.DefiActivity" />
+        <activity android:name=".activity.PoolDetailsActivity" />
+        <activity android:name=".activity.PoolListActivity" />
+        <activity android:name=".activity.PoolYieldListActivity" />
+        <activity android:name=".activity.PoolIntroductionActivity" />
+        <activity android:name=".activity.MineSystemNoticeActivity" />
+        <activity android:name=".activity.MineBookDetailActivity" />
+        <activity android:name="com.king.zxing.CaptureActivity" />
+        <activity android:name=".activity.AssetDetailActivity" />
+        <activity android:name=".activity.AreaSelectActivity" />
+        <activity android:name=".activity.CertificationImgActivity" />
+        <activity android:name=".activity.MineBookActivity" />
+        <activity android:name=".activity.CertificationActivity" />
+        <activity android:name=".activity.MineTeamActivity" />
+        <activity android:name=".activity.MineCommunityActivity" />
+        <activity android:name=".activity.MineAssetActivity" />
+        <activity android:name=".activity.CreatSelectHelpAckActivity" />
+        <activity android:name=".activity.MineSystemActivity" />
+        <activity android:name=".activity.MineSafeActivity" />
+        <activity android:name=".activity.PoolStartActivity" />
+        <activity android:name=".activity.RecoverActivity" />
+        <activity android:name=".activity.CreateSelectSiAckActivity" />
+        <activity android:name=".activity.CreateSelectSiActivity" />
+        <activity android:name=".activity.CreateSelectHelpActivity" />
+        <activity android:name=".activity.CreateSelectActivity" />
+        <activity android:name=".activity.CreateUserActivity" />
+        <activity android:name=".activity.AgreementActivity" />
+        <activity android:name=".activity.MineTransferActivity" />
+        <activity android:name=".activity.MineExchangeActivity" />
+        <activity android:name=".activity.MineExtractActivity" />
+        <activity android:name=".activity.MineRechargeActivity" />
+        <activity android:name=".activity.JoinActivity" />
+        <activity android:name=".activity.UserActivity" />
+        <activity android:name=".activity.ZxingActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.PickActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.smtt.sdk.VideoActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.tencent.smtt.tbs.video.PLAY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FlashActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTop"
+            android:theme="@style/AppCoverTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 配置    start -->
+        <!--
+    只要依赖 AutoSize 就必须填写设计图尺寸, 否则报错, 不想使用 AutoSize 就不要依赖 AutoSize
+    只要填写完设计图的尺寸, AutoSize 就会自动启动, 以下 dp 尺寸是根据公式 px / (dpi / 160) 求出, 运算时使用测试机的 dpi 即可
+    AutoSize 的详细介绍请看这里 https://juejin.im/post/5bce688e6fb9a05cf715d1c2
+    1920x1080   480dpi   360x640
+        -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" /> <!-- Arms 配置 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" />
+    </application>
+
+</manifest>

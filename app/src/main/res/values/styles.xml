@@ -1,0 +1,138 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation_Activity</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+    <style name="AppCoverTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--        <item name="android:statusBarColor">@android:color/white</item>-->
+        <!--        <item name="android:navigationBarColor">@android:color/white</item>-->
+        <item name="android:windowBackground">@drawable/bg_flash</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- 设置statusBarColor 为透明-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- 在5.0后，增加了一个windowDrawsSystemBarBackgrounds属性，用来标志此窗口是否负责绘制系统栏背景，
+              我们把它设成false，这样当它绘制windowBackground的时候，就会在NavigationBar之上。-->
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+    </style>
+    <style name="Animation_Activity"  parent="@android:style/Animation.Activity">
+<!--        activityOpenEnterAnimation  用于设置打开新的Activity并进入新的Activity展示的动画-->
+<!--        activityOpenExitAnimation  用于设置打开新的Activity并销毁之前的Activity展示的动画-->
+<!--        activityCloseEnterAnimation   用于设置关闭当前Activity进入上一个Activity展示的动画-->
+<!--        activityCloseExitAnimation   用于设置关闭当前Activity时展示的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_entry</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_entry</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_exit</item>
+    </style>
+    <style name="Sweet.Alert.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SweetDialogAnimation</item>
+    </style>
+
+    <style name="LoadingProgressbar" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SweetDialogAnimation</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="SweetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/fade_entry</item>
+        <item name="android:windowExitAnimation">@anim/fade_exit</item>
+    </style>
+
+    <style name="ImagePopDialog"  parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_entry</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom_exit</item>
+    </style>
+    <style name="popwindow_modal">
+        <item name="android:windowEnterAnimation">@anim/modal_entry</item>
+        <item name="android:windowExitAnimation">@anim/modal_exit</item>
+    </style>
+    <style name="popwindow_fade">
+        <item name="android:windowEnterAnimation">@anim/fade_entry</item>
+        <item name="android:windowExitAnimation">@anim/fade_exit</item>
+    </style>
+    <!--默认样式-->
+    <style name="picture.default.style" parent="Base.Theme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture.statusFontColor">false</item>
+        <!--返回键图标-->
+        <item name="picture.leftBack.icon">@drawable/picture_icon_back</item>
+        <!--标题下拉箭头-->
+        <item name="picture.arrow_down.icon">@drawable/picture_icon_arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture.arrow_up.icon">@drawable/picture_icon_arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture.title.textColor">@color/picture_color_white</item>
+        <!--标题栏右边文字-->
+        <item name="picture.right.textColor">@color/picture_color_white</item>
+        <!--图片列表勾选样式-->
+        <item name="picture.checked.style">@drawable/picture_checkbox_selector</item>
+        <!--开启图片列表勾选数字模式-->
+        <item name="picture.style.checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture.style.numComplete">false</item>
+        <!--图片列表底部背景色-->
+        <item name="picture.bottom.bg">@color/white</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture.preview.textColor">@color/font_color_text</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture.complete.textColor">@color/font_color_text</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture.ac_preview.title.textColor">@color/font_color_text</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture.ac_preview.complete.textColor">@color/font_color_text</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture.ac_preview.title.bg">@color/colorPrimary</item>
+        <!--预览界面底部背景色-->
+        <item name="picture.ac_preview.bottom.bg">@color/colorPrimary</item>
+        <!--预览界面返回箭头-->
+        <item name="picture.preview.leftBack.icon">@drawable/picture_icon_back</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture.crop.toolbar.bg">@color/picture_color_grey</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture.crop.status.color">@color/picture_color_grey</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture.crop.title.color">@color/picture_color_white</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture.folder_checked_dot">@drawable/yellow_oval</item>
+    </style>
+
+    <style name="take_photo_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="outCircleColor" format="color"></attr>
+        <attr name="inCircleColor" format="color"></attr>
+        <attr name="progressColor" format="color"></attr>
+        <attr name="textColor" format="color"></attr>
+        <attr name="textBold" format="boolean"></attr>
+        <attr name="lineWidth" format="dimension"></attr>
+    </declare-styleable>
+</resources>

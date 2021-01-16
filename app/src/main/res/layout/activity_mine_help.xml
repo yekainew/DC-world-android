@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical"
+    tools:context=".activity.MineHelpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/exchange_fanhui"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_tool_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/string_mine_help"
+            android:textColor="@color/font_color_text"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mine_help_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab1"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab2"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"
+
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab3"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab4"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab5"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab6"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+
+            <TextView
+                android:id="@+id/mine_help_tab8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab8"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab9"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab10"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab11"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab11"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab12"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab12"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+            <TextView
+                android:id="@+id/mine_help_tab13"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/dark"
+                android:drawableRight="@mipmap/icon_my_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/string_mine_help_tab13"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/item_view" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

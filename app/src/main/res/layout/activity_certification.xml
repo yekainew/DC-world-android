@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    tools:context=".activity.CertificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/string_mine_safe"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/icon_change_safe"
+            android:drawablePadding="10dp"
+            android:text="@string/string_text_certification"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/string_certification_nation"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"/>
+            <TextView
+                android:id="@+id/certification_nation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_china"
+                android:drawableRight="@mipmap/new_icon_show_down"
+                android:drawablePadding="10dp"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/item_view"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/string_name"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"/>
+
+            <com.jkkg.hhtx.widget.ClearEditText
+                android:id="@+id/certification_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/string_real_name"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/font_color_text"
+                android:textColorHint="@color/hint_color_text"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/item_view"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/string_idcode"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_14"/>
+
+            <com.jkkg.hhtx.widget.ClearEditText
+                android:id="@+id/certification_id_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                android:hint="@string/string_edit_idcode"
+                android:inputType="number"
+                android:maxLines="18"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/font_color_text"
+                android:textColorHint="@color/hint_color_text"
+                android:textSize="@dimen/sp_14" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/item_view"/>
+
+        <Button
+            android:id="@+id/btn_true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/new_bg_button"
+            android:text="@string/string_next"
+            android:textColor="@color/show_text"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.RewardListActivity">
+    <include layout="@layout/include_title"/>
+    <com.jkkg.hhtx.widget.tablayout.CommonTabLayout
+        android:id="@+id/commontab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:tl_textSelectColor="@color/colorAccent"
+        app:tl_textUnselectColor="@color/hint_color_text"
+        app:tl_tab_space_equal="true"
+        app:tl_textsize="@dimen/sp_14"
+        android:visibility="gone"
+        app:tl_underline_height="0dp"
+        app:tl_indicator_height="0dp"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:overScrollMode="never"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        />
+</LinearLayout>

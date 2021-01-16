@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:padding="20dp"
+    android:background="@mipmap/new_pop_psw">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_exchange_name_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/font_color_text"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <com.jkkg.hhtx.widget.ClearEditText
+        android:id="@+id/edit_psd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/new_edit_bg"
+        android:gravity="center"
+        android:hint="@string/string_edit_name"
+        android:lines="1"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/font_color_text"
+        android:textColorHint="@color/hint_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/item_view" />
+
+    <LinearLayout
+        android:id="@+id/sweet_dialog_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/dialog_left_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/string_sweet_cancle"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:id="@+id/dialog_line"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/item_view" />
+
+        <TextView
+            android:id="@+id/btn_ture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/string_sweet_confirm"
+            android:textColor="@color/show_text"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+</LinearLayout>

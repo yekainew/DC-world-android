@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/up_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_rel">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/exchange_lin_shape">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/string_diyiqi"
+                            android:id="@+id/ycdy_ex"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_13"
+
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/jieshudaojishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/string_end_jishi"
+                        android:layout_marginLeft="18dp"
+                        android:textColor="#565E6B"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/jieshudaojishi"
+                        android:layout_toEndOf="@id/jieshudaojishi"
+                        android:text="16天12时13分"
+                        android:textColor="#D47B1B"
+                        android:id="@+id/timer_ex"
+                        android:textSize="@dimen/sp_13" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/jieshudaojishi"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/prog_lin"
+                        android:layout_marginLeft="18dp"
+                        android:gravity="center_vertical">
+
+                        <ProgressBar
+                            android:id="@+id/progressbar_exchange"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:layout_marginRight="@dimen/corner_15"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progress="10"
+                            android:progressDrawable="@drawable/progressbar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/progressbar_exchange"
+                            android:layout_marginRight="16dp"
+                            android:layout_toEndOf="@id/progressbar_exchange"
+                            android:text="7.54%"
+                            android:id="@+id/baifen_ex"
+                            android:textColor="#296BD2"
+                            android:textSize="@dimen/sp_12" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已兑换100/5000 "
+                        android:layout_marginLeft="18dp"
+                        android:textColor="#565E6B"
+                        android:textSize="@dimen/sp_13"
+                        android:layout_below="@id/prog_lin"
+                        android:layout_marginTop="11dp"
+                        android:id="@+id/duihuan_ex"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#232E3A"
+                        android:layout_below="@id/duihuan_ex"
+                        android:layout_marginTop="17dp"
+                        />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/img_excharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/up_rel"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_excharge"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:background="@color/dark">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/icon_usdt"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="USDT"
+                        android:textStyle="bold"
+                        android:textColor="@color/font_color_text"
+                        android:textSize="@dimen/sp_16" />
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/icon_duihuan_right"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/icon_dcb"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical"
+                        android:text="DC"
+                        android:textStyle="bold"
+                        android:id="@+id/title_dcy"
+                        android:textColor="@color/font_color_text"
+                        android:textSize="@dimen/sp_16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:background="@drawable/bg_dack_down"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_mine_exchange_rate"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/cny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 DC＝0.333 USDT"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/string_mine_exchange"
+                android:textColor="@color/font_color_text"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/exchange_shape"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/edit_num"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_edittext_exchange_rate_num"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/usdt_dc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="DC"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_yuji_get"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="12dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/exchange_shape"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_num"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:layout_marginLeft="5dp"
+
+                    android:gravity="center_vertical"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="DC"
+                    android:id="@+id/yuji_dc"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_hand_fee"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="12dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/exchange_shape"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tx_excharge_fee"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/exchange_shape"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.jkkg.hhtx.widget.ClearEditText
+                    android:id="@+id/edit_psd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_input_pwd"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_text"
+                    android:textColorHint="@color/hint_color_text"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_usdt_yu"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/usdt_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:lines="1"
+                    android:text="0.00"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:lines="1"
+                    android:text="@string/string_exchang_more"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tx_excharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="0.00 DC"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:lines="1"
+                    android:text="@string/string_exchange_num"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tx_excharge_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="10"
+                    android:textColor="@color/font_color_text"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_excharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/bg_sift_corner"
+                android:text="@string/string_mine_exchange"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

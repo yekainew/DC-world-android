@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    tools:context=".activity.SendCodeActivity">
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/string_edit_code"
+            android:textColor="@color/font_color_text"
+            android:textSize="22sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_yanzheng_code_send"
+                android:textColor="@color/hint_color_text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13200000000"
+                android:textColor="@color/hint_color_text"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <com.wynsbin.vciv.VerificationCodeInputView
+            android:id="@+id/editHide"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:vciv_et_underline_height="2dp"
+            app:vciv_et_underline_show="true"
+            app:vciv_et_height="50dp"
+            app:vciv_et_inputType="number"
+            app:vciv_et_number="6"
+            app:vciv_et_text_color="@color/font_color_text"
+            app:vciv_et_text_size="@dimen/sp_24"
+            app:vciv_et_underline_default_color="@color/bg_pic"
+            app:vciv_et_underline_focus_color="@color/show_text"
+            app:vciv_et_background="@color/bg_pic"
+            app:vciv_et_cursor_color="@color/show_text"
+            app:vciv_et_cursor_width="1dp"
+            app:vciv_et_width="50dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:text="（60 s）"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14"
+            android:gravity="right"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginBottom="60dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@mipmap/new_bg_tab"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false">
+        <com.jkkg.hhtx.widget.tablayout.CommonTabLayout
+            android:id="@+id/commontab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="6dp"
+            app:tl_textSelectColor="@color/tab_color_show"
+            app:tl_textUnselectColor="@color/text999"
+            app:tl_textsize="12sp"
+            app:tl_iconWidth="36dp"
+            app:tl_iconHeight="36dp"
+            app:tl_iconMargin="0dp"
+            app:tl_indicator_color="@color/dark"
+            app:tl_underline_color="@color/dark"
+            app:tl_underline_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="20dp"
+            android:clipChildren="false"/>
+    </RelativeLayout>
+
+</RelativeLayout>

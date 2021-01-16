@@ -1,0 +1,5 @@
+include ':mugui-block-btc'
+include ':mugui-sql'
+include ':mugui-block'
+rootProject.name='jkkg'
+include ':app'

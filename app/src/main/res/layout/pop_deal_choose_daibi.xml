@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/new_bg_pop_deal_gaoji_set"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/string_choose_daibi"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/deal_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/icon_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@mipmap/new_edit_bg"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.jkkg.hhtx.widget.ClearEditText
+                android:id="@+id/edit_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="1234567890qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm"
+                android:hint="@string/string_edit_sousuo"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/font_color_text"
+                android:textColorHint="@color/hint_color_text"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/new_icon_find_sousuo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/string_daibi_name"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/new_bg_deal_choose_daibi_list"
+            android:padding="10dp" />
+
+    </LinearLayout>
+</LinearLayout>

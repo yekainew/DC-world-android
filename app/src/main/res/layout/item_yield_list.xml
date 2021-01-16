@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/yield_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-10-14 09:55:50"
+            android:textColor="@color/hint_color_text"
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/yield_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="+ 0.00 DC"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/item_view"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

@@ -1,0 +1,242 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    //java 1.8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.jkkg.hhtx"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64', 'armeabi'
+        }
+    }
+    //打包
+    signingConfigs {//
+        config {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('../key/hhtx.jks')
+            storePassword '123456'
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+                jniLibs.srcDirs = ['libs']
+            }
+
+            proto {
+                srcDir 'src/main/proto'
+                include '**/*.proto'
+            }
+        }
+    }
+    buildTypes {
+//        release {
+//            buildConfigField "boolean", "TEST", "false"
+//            minifyEnabled true
+//            shrinkResources true
+//            zipAlignEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+//        }
+        release {
+            buildConfigField "boolean", "TEST", "false"//开启日志
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+
+        debug {
+            buildConfigField "boolean", "TEST", "true"//开启日志
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+        ignoreWarnings true
+    }
+    packagingOptions {
+        exclude 'org/bouncycastle/x509/CertPathReviewerMessages_de.properties'
+        exclude 'org/bouncycastle/x509/CertPathReviewerMessages.properties'
+        doNotStrip "**/libDX*.so"
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.6.1'
+    }
+    plugins {
+        javalite {
+            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
+        }
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.9.0'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                javalite {}
+                grpc {
+                    // Options added to --grpc_out
+                    option 'lite'
+                }
+            }
+        }
+    }
+}
+dependencies {
+
+//    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    implementation files('../app/libs/base-release.aar')
+    implementation files('../app/libs/fastjson-1.2.75_preview_03.jar')
+    //自动适配
+    implementation rootProject.ext.dependencies["autosize"]
+    //support
+    implementation rootProject.ext.dependencies["constraint"]
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor rootProject.ext.dependencies["constraint"]
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["legacy-support-v4"]
+    implementation rootProject.ext.dependencies["cardview"]
+    implementation rootProject.ext.dependencies["annotations"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    implementation rootProject.ext.dependencies["glide-loader-okhttp3"]
+    implementation rootProject.ext.dependencies["glide-transformations"]
+    implementation rootProject.ext.dependencies["timber"]
+    implementation rootProject.ext.dependencies["rxandroid2"]
+    implementation rootProject.ext.dependencies["rxpermissions2"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    //evenbus
+    implementation rootProject.ext.dependencies["eventbus"]
+    //二维码
+    implementation rootProject.ext.dependencies["zxing"]
+    //状态栏
+    implementation rootProject.ext.dependencies["immersionbar"]
+    implementation rootProject.ext.dependencies["immersionbar-c"]
+    implementation rootProject.ext.dependencies["refreshlayout"]
+    implementation rootProject.ext.dependencies["refreshlayoutClassicsheader"]
+    implementation rootProject.ext.dependencies["refreshlayoutMaterialfooter"]
+    implementation rootProject.ext.dependencies["refreshlayoutMaterialheader"]
+    implementation rootProject.ext.dependencies["baserecyclerview"]
+    //富文本
+    implementation rootProject.ext.dependencies["rich-text"]
+    //图片缩放
+    implementation rootProject.ext.dependencies["photoview"]
+    implementation rootProject.ext.dependencies["nineoldandroids"]
+    implementation rootProject.ext.dependencies["banner"]
+    //Toast
+    implementation rootProject.ext.dependencies["toast"]
+    //美团自动打包
+    implementation 'com.meituan.android.walle:library:1.1.6'
+    //首字母索引
+    implementation 'me.yokeyword:indexablerecyclerview:1.3.0'
+    //拼音
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+    // 可选，适用于 Android 的中国地区词典
+    implementation 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
+    //流式布局
+    implementation 'com.google.android:flexbox:1.1.0'
+    //popwindow
+    implementation 'com.github.razerdp:BasePopup:2.2.9'
+    //选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation "com.just.agentweb:agentweb:4.1.3"
+    //验证码
+    implementation 'com.github.Wynsbin:VerificationCodeInputView:1.0.2'
+    //lottie
+    implementation 'com.airbnb.android:lottie:3.4.2'
+    //支持多个滑动布局 吸顶
+    implementation 'com.github.donkingliang:ConsecutiveScroller:4.3.0'/*
+    //微信x5
+    implementation files('libs/tbs_sdk_thirdapp.jar')*/
+    // implementation files('libs/bcprov-jdk15on-1.60.jar')
+    implementation files('libs/oaid_sdk_1.0.23.aar')
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.3.2'
+
+    // https://mvnrepository.com/artifact/cn.hutool/hutool-all
+    implementation group: 'cn.hutool', name: 'hutool-all', version: '5.4.2'
+
+
+// https://mvnrepository.com/artifact/org.xerial.snappy/snappy-java
+    //implementation group: 'org.xerial.snappy', name: 'snappy-java', version: '1.1.7.5'
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    //图片选择
+    implementation('com.github.LuckSiege.PictureSelector:picture_library:2.5.8') {
+        exclude group: 'com.google.guava'
+
+    }
+    //图表库
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation(project(':mugui-block')) {
+        exclude group: 'com.alibaba'
+    }
+    implementation(project(':mugui-block-btc')) {
+        exclude group: 'com.alibaba'
+        exclude group: 'org.bouncycastle'
+        exclude group: 'com.google.protobuf'
+    }
+    implementation(project(':mugui-sql')) {
+
+        exclude group: 'com.alibaba'
+    }
+
+
+    implementation 'com.google.protobuf:protobuf-lite:3.0.1'
+    implementation 'com.github.liys666666:LProgressView:V1.0.82'
+    implementation 'com.github.Runly:CircularProgressView:v2.0.0'
+
+    // AndroidX
+    implementation 'com.teprinciple:updateapputils:2.3.0'
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    implementation 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+
+    implementation(name: 'dx-captcha-1.7.0', ext: 'aar')
+    implementation(name: 'dx-risk-5.7.7', ext: 'jar')
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+}

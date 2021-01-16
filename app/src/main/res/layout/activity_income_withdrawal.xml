@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.IncomeWithdrawalActivity">
+    <include layout="@layout/include_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/withdraw_price"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14"/>
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/edit_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/playse_price_num"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/sms_yanzheng"
+            android:textColor="@color/font_color_text"
+            android:textSize="@dimen/sp_14"/>
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/edit_password"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/playse_sms_yanzheng"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:text="@string/string_registration_send_code"
+            android:textColor="@color/tab_color_show"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/item_view"/>
+    <TextView
+        android:id="@+id/usdt_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="可提 0.0 USDT"
+        android:textColor="@color/hint_color_text"/>
+    <Button
+        android:id="@+id/btn_ture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/new_bg_button"
+        android:text="@string/string_tijiao"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

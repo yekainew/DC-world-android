@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_topic"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/pool_choose"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/new_button_exitview"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/pool_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="DCB专属矿机"
+            android:textColor="@color/font_color_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/icon_down" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/new_button_exitview"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/pool_dc_number"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入DCB的数量"
+            android:inputType="number"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:text="DCB"
+            android:id="@+id/price_name"
+            android:textColor="@color/hint_color_text"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/item_view" />
+
+        <TextView
+            android:id="@+id/pool_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:text="@string/string_all"
+            android:textColor="@color/font_color_text"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/new_button_exitview"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.jkkg.hhtx.widget.ClearEditText
+            android:id="@+id/pool_dc_psw"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入钱包密码"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/font_color_text"
+            android:textColorHint="@color/hint_color_text"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/pool_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预计获得的算力值 0.00GH/S"
+            android:textColor="@color/hint_color_text"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="DCB可使用数量"
+                android:id="@+id/name_num"
+                android:textColor="@color/font_color_text"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/pool_dc_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="0.00"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/new_bg_button"
+        android:text="@string/string_tab_pool_start"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

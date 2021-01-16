@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="尊敬的用户：目前，PLUS POOL APP内的交易区和矿池区仍处于测试状态，敬请期待，给您带来的不便敬请谅解。"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_12" />
+</LinearLayout>

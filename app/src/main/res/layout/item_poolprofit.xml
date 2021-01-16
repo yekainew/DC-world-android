@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666E7A"
+        android:text="@string/string_wakuang_yield_dc"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="14dp"
+        android:id="@+id/profit_tv"
+        android:textSize="@dimen/sp_14"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020-01-04 10:10:23"
+        android:textColor="#565E6B"
+        android:textSize="@dimen/sp_12"
+        android:id="@+id/profit_tv1"
+        android:layout_below="@id/profit_tv"
+        android:layout_alignStart="@id/profit_tv"
+        android:layout_marginTop="@dimen/corner_8"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/profit_tv1"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="#232E3A"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1111.0000"
+        android:id="@+id/profit_tv2"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        />
+</RelativeLayout>

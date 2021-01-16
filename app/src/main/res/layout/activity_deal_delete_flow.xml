@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_pic"
+    android:orientation="vertical"
+    tools:context=".activity.DealDeleteFlowActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/deal_fanhui"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_tool_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/string_yichu_liudong"
+            android:textColor="@color/font_color_text"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/bg_tab"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/string_your_cangwei"
+                        android:textColor="@color/font_color_text"
+                        android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@mipmap/new_deal_delete_cwei"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:padding="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="TRX"
+                                    android:textColor="@color/font_color_text"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="USDT"
+                                    android:textColor="@color/font_color_text"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/string_pool_daibi"
+                                    android:textColor="@color/font_color_text"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="2dp">
+
+                                <TextView
+                                    android:id="@+id/trx_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="0.00"
+                                    android:textColor="@color/font_color_text"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/usdt_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="0.00"
+                                    android:textColor="@color/font_color_text"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/deal_daibi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="0.00"
+                                    android:textColor="@color/font_color_text"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_look_tongzheng"
+                                android:textColor="@color/font_color_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/show_daibi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="TRX WIN"
+                                android:textColor="@color/show_text"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_zhe"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/string_delete_num"
+                        android:textColor="@color/font_color_text"
+                        android:textSize="12sp" />
+
+                    <com.liys.view.LineBottomProView
+                        android:id="@+id/bottom_pro_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:box_radius="6dp"
+                        app:progress_color="@color/show_text"
+                        app:progress_color_background="@color/bg_pic"
+                        app:progress_max="100"
+                        app:progress_value="50"
+                        app:radius="10dp"
+                        app:text_color="@color/text333"
+                        app:text_decimal_num="2"
+                        app:text_show="true"
+                        app:text_size="10sp"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/baifenbi1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center"
+                            android:text="25%"
+                            android:textColor="@color/text333"
+                            android:background="@mipmap/new_icon_show_text_hdrrd"/>
+                        <TextView
+                            android:id="@+id/baifenbi2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center"
+                            android:text="50%"
+                            android:textColor="@color/white"
+                            android:background="@mipmap/new_icon_text_hdrrd"/>
+                        <TextView
+                            android:id="@+id/baifenbi3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textColor="@color/white"
+                            android:background="@mipmap/new_icon_text_hdrrd"/>
+                        <TextView
+                            android:id="@+id/baifenbi4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center"
+                            android:text="100%"
+                            android:textColor="@color/white"
+                            android:background="@mipmap/new_icon_text_hdrrd"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="0.00"
+                                android:textColor="@color/show_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/duihuai_usdt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="1 USDT = 27.843328 TRX"
+                                android:textColor="@color/font_color_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="0.00"
+                                android:textColor="@color/show_text"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="2dp">
+
+                            <TextView
+                                android:id="@+id/usdt_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentLeft="true"
+                                android:text="USDT"
+                                android:textColor="@color/font_color_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/duihuan_trx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="1 TRX  =  0.035915 USDT"
+                                android:textColor="@color/font_color_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/trx_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentRight="true"
+                                android:text="TRX"
+                                android:textColor="@color/font_color_text"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_ture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@mipmap/new_bg_button"
+                        android:text="@string/string_delete"
+                        android:textColor="@color/show_text"
+                        android:textSize="@dimen/sp_14"
+                        android:visibility="visible" />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

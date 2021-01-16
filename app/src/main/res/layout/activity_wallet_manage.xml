@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_topic"
+    tools:context=".activity.WalletManageActivity">
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:id="@+id/safe_certification"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/new_wallet_center_head"/>
+
+        <TextView
+            android:id="@+id/safe_certification_type"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="myste"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/safe_certification_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/new_wallet_center_name" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/safe_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@mipmap/new_wallet_center_daochu"
+        android:drawableRight="@mipmap/new_wallet_center_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/string_safe_wallet"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/item_view" />
+
+    <TextView
+        android:id="@+id/wallet_paw"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawableLeft="@mipmap/new_wallet_center_xiugai"
+        android:drawableRight="@mipmap/new_wallet_center_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/string_modify_password"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/item_view" />
+
+    <TextView
+        android:id="@+id/chongzhi_paw"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawableLeft="@mipmap/new_wallet_center_chongzhi"
+        android:drawableRight="@mipmap/new_wallet_center_right"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/string_reset_wallet_password"
+        android:textColor="@color/font_color_text"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/item_view" />
+
+
+</LinearLayout>
